@@ -27,44 +27,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="panel-heading">Login</div>
                     <div class="panel-body">
 
+                        <div class="panel-heading">
+                            <div class="panel-title text-center">
+                                <h2 class="title">IBS Eventos</h2>
+                                <hr />
+                            </div>
+                        </div> 
+
                         <!-- Login Form -->
-                        <form role="form">
-
-                            <!-- Username Field -->
-                            <div class="row">
-                                <div class="form-group col-xs-12">
-                                    <label for="username"><span class="text-danger" style="margin-right:5px;">*</span>Usuário:</label>
-                                    <div class="input-group">
-                                        <input class="form-control" id="username" type="text" name="username" placeholder="usuário" required/>
-                                        <span class="input-group-btn">
-                                            <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
-                                        </span>
-                                        </span>
-                                    </div>
+                        <?php
+                        echo form_open("login/autenticar");
+                        ?>
+                        <!-- Username Field -->
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <label for="username"><span class="text-danger" style="margin-right:5px;">*</span>Usuário:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="username" type="text" name="username" placeholder="usuário" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Content Field -->
-                            <div class="row">
-                                <div class="form-group col-xs-12">
-                                    <label for="password"><span class="text-danger" style="margin-right:5px;">*</span>Senha:</label>
-                                    <div class="input-group">
-                                        <input class="form-control" id="password" type="password" name="password" placeholder="senha" required/>
-                                        <span class="input-group-btn">
-                                            <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></label>
-                                        </span>
-                                        </span>
-                                    </div>
+                        <!-- Content Field -->
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <label for="password"><span class="text-danger" style="margin-right:5px;">*</span>Senha:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="password" type="password" name="password" placeholder="senha" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Login Button -->
-                            <div class="row">
-                                <div class="form-group col-xs-8">
-                                    <button class="btn btn-primary" type="submit">Logar</button>
-                                    <button class="btn btn-primary" type="submit">Cadastrar</button>
-                                </div>
-                            </div>                            
+                        <!-- Login Button -->
+                        <div class="row">
+                            <div class="form-group col-xs-8">
+                                <button class="btn btn-primary" type="submit">Logar</button>
+                                <?= anchor('Usuario', 'Cadastrar', array("class" => "btn btn-primary")); ?></li>
+                            </div>
+                        </div>                            
 
                         </form>
                         <!-- End of Login Form -->
