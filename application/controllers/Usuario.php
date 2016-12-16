@@ -7,6 +7,7 @@ class Usuario extends CI_Controller{
     public function index (){
         $tiposUsuarios = retorna_tiposUsuarios();
         $dados ['tipoDeUsuario'] = $tiposUsuarios; 
+        $this->load->view("includes/header");
         $this->load->view("cadastro_usuario", $dados);
     }
     
