@@ -1,28 +1,36 @@
-<title>Cadastrar</title>
+<script type="text/javascript">
+    function verificarSenha() {
+        var campo1 = document.getElementById("senhaUsuario").value;
+        var campo2 = document.getElementById("senhaUsuario2").value;
+        if (campo1 == campo2) {
+            document.getElementById("resultado").innerHTML = "&raquo; OK!";
+            document.getElementById("resultado").style.color = "#008B45";
+        } else {
+            document.getElementById("resultado").innerHTML = "As senhas não correspondem!";
+            document.getElementById("resultado").style.color = "#FF6347";
+        }
+    }
+</script>
+
+<title>Editar Usuário </title>
 
 <div class="container">
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-primary">
-            <div class="panel-heading">Realizar Cadastro</div>
+            <div class="panel-heading">Editar Cadastro</div>
             <div class="panel-body">
-
-                <div class="panel-heading">
-                    <div class="panel-title text-center">
-                        <h2 class="title">IBS Eventos</h2>
-                        <hr />
-                    </div>
-                </div> 
-
+                <h1><?php echo $usuario["nomeUsuario"] ?></h1> 
                 <!-- Login Form -->
                 <?php
-                echo form_open("Usuario/novo_usuario");
+                echo form_open("Usuario/update_usuario");
                 ?>
                 <!-- Username Field -->
                 <div class="row">                          
                     <div class="form-group col-xs-12">
                         <label for="nomeUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Nome:</label>
                         <div class="input-group">
-                            <input class="form-control" id="nomeUsuario" type="text" name="nomeUsuario" placeholder="Informe seu nome" required/>
+                            <input class="form-control" id="nomeUsuario" type="text" name="nomeUsuario" value ="<?php echo $usuario["nomeUsuario"] ?>" required/>
+                            
                             <span class="input-group-btn">
                                 <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
                             </span>
@@ -58,7 +66,7 @@
                     <div class="form-group col-xs-12">
                         <label for="ramalUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Ramal (xxx):</label>
                         <div class="input-group">
-                            <input class="form-control" id="ramalUsuario" type="tel" pattern="^\d{3}$" name="ramalUsuario" placeholder="Informe o seu ramal" required/>
+                            <input class="form-control" id="ramlUsuario" type="tel" pattern="^\d{3}$" name="ramalUsuario" placeholder="Informe o seu ramal" required/>
                             <span class="input-group-btn">
                                 <label class="btn btn-primary"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></label>
                             </span>
@@ -118,13 +126,16 @@
                     </div>
                 </div>                         
                 <div class="form-group ">
-                    <button id="botao_cadastrar" type="submit" class="btn btn-primary btn-lg btn-block login-button" >Cadastrar</button>
-                </div>
-                <div class="login-register">
-                    <?= anchor('Login', 'Login') ?>
-                </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>
+                </div>                        
                 </form>
             </div>
         </div>
     </div>
-</div>    
+</div>
+
+    <script>
+        console.log(document.querySelector('#tipoUsuario'));
+    </script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>            
+

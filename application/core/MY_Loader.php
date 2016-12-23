@@ -8,7 +8,7 @@ class MY_Loader extends CI_Loader {
         $this->view("includes/header");
         $this->view("includes/menu");
         $this->view("includes/sidebar");
-        //$this->view("includes/body");
+        $this->view("includes/body");        
         $this->view($nome, $dados);
         $this->view("includes/footer");
     }

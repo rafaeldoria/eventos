@@ -1,10 +1,9 @@
-<body>
-    <div class="container">       
-        <?php if ($this->session->flashdata("success")) : ?>
-            <p class="alert alert-success"><?= $this->session->flashdata("success") ?></p>
-        <?php endif ?>
 
-        <?php if ($this->session->flashdata("danger")) : ?>
-            <p class="alert alert-danger"><?= $this->session->flashdata("danger") ?></p>
-        <?php endif ?>
+<div id="page-wrapper" >
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="main" class="container-fluid" style="margin-top: 50px">
+
+                    
 

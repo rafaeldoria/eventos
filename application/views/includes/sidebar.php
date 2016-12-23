@@ -5,8 +5,9 @@
 
 
 
-            <li class="active-link">
-                <a href="index.html" ><i class="fa fa-users "></i>Usuários</a>
+            <li>
+                <?= anchor('Usuario', '<i class="fa fa-users"></i>
+            <span class="hidden-tablet">Usuários</span>') ?>
             </li>
             <li>
                 <a href="ui.html"><i class="fa fa-institution "></i>Espaços</a>
