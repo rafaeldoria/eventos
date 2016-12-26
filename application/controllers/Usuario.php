@@ -7,7 +7,7 @@ class Usuario extends CI_Controller {
     public function index() {
         autorizar();
         $this->load->model("Usuarios_model");
-        $this->load->template("usuario_view");
+        $this->load->template("usuario/usuario_view");
     }
 
     public function cadastrar_usuario() {
@@ -15,7 +15,7 @@ class Usuario extends CI_Controller {
         $tiposUsuarios = retorna_tiposUsuarios();
         $dados ['tipoDeUsuario'] = $tiposUsuarios;
         //$this->load->view("includes/header");
-        $this->load->template("cadastro_usuario", $dados);
+        $this->load->template("usuario/cadastro_usuario", $dados);
     }
 
     public function novo_usuario() {
@@ -74,6 +74,7 @@ class Usuario extends CI_Controller {
         $this->load->model("Usuarios_model");
         $this->Usuarios_model->excluiUsuario($idUsuario);
         redirect("usuario");
+        
     }
 
 }

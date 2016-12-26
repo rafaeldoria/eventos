@@ -15,7 +15,8 @@
             <!-- userdata : usa sessão -->
             <span class="logout-spn">
                 <?php if ($this->session->userdata("usuario_logado")) : ?> 
-                    <?= anchor('login/logout', 'Logout', 'style="color:#fff"') ?>                  
+                    <?= anchor('login/logout', 'Logout', 'style="color:#fff"') ?><br/>
+                    
                 <?php endif ?>
             </span>
     </div>

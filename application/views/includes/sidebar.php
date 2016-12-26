@@ -10,7 +10,8 @@
             <span class="hidden-tablet">Usuários</span>') ?>
             </li>
             <li>
-                <a href="ui.html"><i class="fa fa-institution "></i>Espaços</a>
+                <?= anchor('Local', '<i class="fa fa-institution"></i>
+            <span class="hidden-tablet">Espaços</span>') ?>                
             </li>
             <li>
                 <a href="blank.html"><i class="fa fa-cubes "></i>Empresas</a>

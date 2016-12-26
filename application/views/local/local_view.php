@@ -1,6 +1,8 @@
 <div id="top" class="row">
     <div class="col-sm-3">
-
+        <div class="alert alert-info">
+            <strong>Welcome <?= $usuario ?> </strong>
+        </div>
     </div>
     <div class="col-sm-6">
 
@@ -15,12 +17,11 @@
 
     </div>
     <div class="col-sm-3">
-        <?= anchor('Usuario/cadastrar_usuario', 'Adicionar', 'class="btn btn-primary pull-right h2"') ?>
+        <?= anchor('Local/cadastro_local', 'Adicionar', 'class="btn btn-primary pull-right h2"') ?>        
     </div>
 </div> <!-- /#top -->
 <!-- titulo colunas -->
 
-<hr />
 <div id="list" class="row">
 
     <div class="table-responsive col-md-12">
@@ -28,17 +29,15 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>E-mail</th>
-                    <th>Login</th>
-                    <th>Senha</th>
-                    <th>Ramal</th>
-                    <th>Setor</th>
+                    <th>Nome do Local</th>
+                    <th>Tipo Local</th>
+                    <th>Andar</th>
+                    <th>Total de Assentos</th>
+                    <th>Tipo de Assentos</th>                    
                     <th class="actions">Ações</th>
                 </tr>
             </thead>
-            <tbody id="tabelaUsuarios">                
+            <tbody id="tabelaLocais">                
             </tbody>
 
         </table>
@@ -58,9 +57,3 @@
     </div>
 </div> <!-- /#bottom -->
 </div> <!-- /#main -->
-
-
-
-
-
-

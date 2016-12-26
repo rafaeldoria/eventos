@@ -1,16 +1,10 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 function excluirUsuario(idUsuario) {
 
     $.post("http://localhost/eventos/Usuario/retorna_usuario", {idUsuario: idUsuario}, function (retorno) {
-        var resultado = eval(retorno);
+        var resultado = eval(retorno); 
         $("#modalLabelExclui").text("Excluir Usuário");
         $('#idUsuarioExclui').val(resultado[0].idUsuario);
-        //$("#div-idExclui").css("display", "none");
+        $("#div-idExclui").css("display", "none");
         $('#nomeUsuarioExclui').val(resultado[0].nomeUsuario);
         $('#modal_exclui').modal('show');
     });
@@ -22,7 +16,7 @@ function editarUsuario(idUsuario) {
         var resultado = eval(retorno);
         $("#modalLabel").text("Editar Usuário");
         $('#idUsuario').val(resultado[0].idUsuario);
-        //$("#div-id").css("display", "none");
+        $("#div-id").css("display", "none");
         $('#nomeUsuario').val(resultado[0].nomeUsuario);
         $('#emailUsuario').val(resultado[0].emailUsuario);
         $('#telefoneUsuario').val(resultado[0].telefoneUsuario);
@@ -45,15 +39,15 @@ $.getJSON("http://localhost/eventos/Usuario/lista_usuarios", function (retorno) 
                 '<td>' + usuario[i].senhaUsuario + '</td>' +
                 '<td>' + usuario[i].ramalUsuario + '</td>' +
                 '<td>' + usuario[i].setorUsuario + '</td>' +
-                '<td><button id="editar' + i + '" class="btn btn-warning btn-xs" value="' + usuario[i].idUsuario + '">Editar</button> ' +
-                '<button id="excluir' + i + '" class="btn btn-danger btn-xs" value="' + usuario[i].idUsuario + '">Excluir</button> ' +
+                '<td><button id="editarUsuario' + i + '" class="btn btn-warning btn-xs" value="' + usuario[i].idUsuario + '">Editar</button> ' +
+                '<button id="excluirUsuario' + i + '" class="btn btn-danger btn-xs" value="' + usuario[i].idUsuario + '">Excluir</button> ' +
                 '</tr>');
-        $('#excluir' + i).click(function () {
+        $('#excluirUsuario' + i).click(function () {
             //alert("opa");
             excluirUsuario($(this).val());
         });
 
-        $('#editar' + i).click(function () {
+        $('#editarUsuario' + i).click(function () {
             //alert("opa");
             editarUsuario($(this).val());
         });
@@ -76,6 +70,8 @@ function verificarSenha() {
         document.getElementById("resultado").style.color = "#FF6347";
     }
 }
+
+
 
 
 

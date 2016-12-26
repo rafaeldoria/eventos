@@ -6,7 +6,8 @@ class Home extends CI_Controller {
 
 
     public function index() {
-        autorizar();
+        autorizar();        
+               
         $this->load->template("home_view");
     }
 
