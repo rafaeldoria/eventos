@@ -17,6 +17,7 @@
 <script src="assets/js/custom.js"></script>
 <script src="<?= base_url('assets/js/usuarios.js') ?>"></script>
 <script src="<?= base_url('assets/js/locais.js') ?>"></script>
+<script src="<?= base_url('assets/js/empresas.js') ?>"></script>
 
 
 </body>

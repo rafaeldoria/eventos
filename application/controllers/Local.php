@@ -27,7 +27,6 @@ class Local extends CI_Controller{
     }
     
     public function lista_locais(){
-        autorizar();
         $this->load->model("Locais_model");
         echo $this->Locais_model->listaLocais();
     }

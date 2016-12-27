@@ -3,8 +3,6 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
 
-
-
             <li>
                 <?= anchor('Usuario', '<i class="fa fa-users"></i>
             <span class="hidden-tablet">Usuários</span>') ?>
@@ -14,10 +12,12 @@
             <span class="hidden-tablet">Espaços</span>') ?>                
             </li>
             <li>
-                <a href="blank.html"><i class="fa fa-cubes "></i>Empresas</a>
+                <?= anchor('Empresa', '<i class="fa fa-cubes"></i>
+            <span class="hidden-tablet">Empresas</span>') ?>                  
             </li>
             <li>
-                <a href="#"><i class="fa fa-microphone "></i>Equipamentos   </a>
+                <?= anchor('Equipamento', '<i class="fa fa-microphone"></i>
+            <span class="hidden-tablet">Equipamentos</span>') ?> 
             </li>
             <li>
                 <a href="#"><i class="fa fa-tags"></i>Fornecedores</a>

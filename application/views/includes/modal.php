@@ -253,7 +253,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir Usuário? </p>
+                        <p> Deseja realmente excluir esse Local? </p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -265,3 +265,138 @@
     </div>
 </div>
 <!-- Fim modal exclui usuário -->
+
+<!-- Modal Edita Empresa-->
+<div class="modal fade" id="modal_edita_empresa" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Editar empresa</h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('Empresa/editar_empresa') ?>" id="formulario_editar">
+                    <div id="div-idEmpresa" class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="idEmpresa"><span class="text-danger" style="margin-right:5px;">*</span>Id Local:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="idEmpresa" type="text" name="idEmpresa" placeholder="Informe nome local" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="nomeEmpresa"><span class="text-danger" style="margin-right:5px;">*</span>Nome da Empresa:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="nomeEmpresa" type="text" name="nomeEmpresa" placeholder="Informe nome da empresa" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="telefoneEmpresa"><span class="text-danger" style="margin-right:5px;">*</span>Telefone Empresa (xxxx-xxxx):</label>
+                            <div class="input-group">
+                                <input class="form-control" id="telefoneEmpresa" type="tel" pattern="^\d{4}-\d{4}$" name="telefoneEmpresa" placeholder="Informe telefone da empresa" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-phone" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="responsavelEmpresa"><span class="text-danger" style="margin-right:5px;">*</span>Nome do Responsável para Contato: </label>
+                            <div class="input-group">
+                                <input class="form-control" id="responsavelEmpresa" type="text" name="responsavelEmpresa" placeholder="Nome do responsável por contato com empresa" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="celularEmpresa"><span class="text-danger" style="margin-right:5px;">*</span>Telefone Celular Responsável(xxxxx-xxxx):</label>
+                            <div class="input-group">
+                                <input class="form-control" id="celularEmpresa" type="tel" pattern="^\d{5}-\d{4}$" name="celularEmpresa" placeholder="Informe celular para contato com responsável" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-phone" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="emailEmpresa"><span class="text-danger" style="margin-right:5px;">*</span>Email do Responsável:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="emailEmpresa" type="email" name="emailEmpresa" placeholder="Informe e-mail do responsável" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>  
+</div>
+<!-- fim modal edita local -->
+    
+
+
+<!-- Modal Exclui usuário -->
+<div class="modal fade" id="modal_exclui_empresa" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiEmpresa"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('Empresa/excluir_empresa') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiEmpresa" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idEmpresaExclui"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idEmpresaExclui" type="text" name="idEmpresaExclui" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir Empresa? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui usuário -->
+    
