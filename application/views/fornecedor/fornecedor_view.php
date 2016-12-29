@@ -1,11 +1,10 @@
 <div id="top" class="row">
-
-    <div class="col-lg-3 ">
+    <div class="col-sm-3">
         <div class="alert alert-info">
             <strong>Welcome <?= $usuario ?> </strong>
         </div>
     </div>
-    <div class="col-sm-6"> 
+    <div class="col-sm-6">
 
         <div class="input-group h2">
             <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
@@ -18,11 +17,10 @@
 
     </div>
     <div class="col-sm-3">
-        <?= anchor('Usuario/cadastrar_usuario', 'Adicionar', 'class="btn btn-primary pull-right h2"') ?>
+        <?= anchor('Fornecedor/adicionar_fornecedor', 'Adicionar', 'class="btn btn-primary pull-right h2"') ?>        
     </div>
 </div> <!-- /#top -->
 <!-- titulo colunas -->
-
 
 <div id="list" class="row">
 
@@ -31,17 +29,14 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>E-mail</th>
-                    <th>Login</th>
-                    <th>Senha</th>
-                    <th>Ramal</th>
-                    <th>Setor</th>
+                    <th>Nome Fornecedor</th>
+                    <th>CNPJ</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>                    
                     <th class="actions">Ações</th>
                 </tr>
             </thead>
-            <tbody id="tabelaUsuarios">                
+            <tbody id="tabelaFornecedores">                
             </tbody>
 
         </table>
@@ -61,9 +56,3 @@
     </div>
 </div> <!-- /#bottom -->
 </div> <!-- /#main -->
-
-
-
-
-
-

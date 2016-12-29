@@ -229,7 +229,7 @@
 </div>   
 <!-- fim modal edita local -->
 
-<!-- Modal Exclui usuário -->
+<!-- Modal Exclui local -->
 <div class="modal fade" id="modal_exclui_local" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -359,11 +359,9 @@
         </div>
     </div>  
 </div>
-<!-- fim modal edita local -->
-    
+<!-- fim modal edita empresa -->
 
-
-<!-- Modal Exclui usuário -->
+<!-- Modal Exclui empresa -->
 <div class="modal fade" id="modal_exclui_empresa" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -398,5 +396,138 @@
         </div>
     </div>
 </div>
-<!-- Fim modal exclui usuário -->
-    
+<!-- Fim modal exclui empresa -->
+
+<!-- Modal Edita Equipamento-->
+<div class="modal fade" id="modal_edita_equipamento" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelEquipamento"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('Equipamento/editar_equipamento') ?>" id="formulario_editar">
+                    <div id="form_modal">
+                        <div id="div-idEquipamento" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idEquipamento"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idEquipamento" type="text" name="idEquipamento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="nomeEquipamento"><span class="text-danger" style="margin-right:5px;">*</span>Nome do Equipamento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="nomeEquipamento" type="text" name="nomeEquipamento" placeholder="Informe nome do equipamento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="tipoEquipamento"><span class="text-danger" style="margin-right:5px;">*</span>Tipo Equipamento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="tipoEquipamento" type="text" name="tipoEquipamento" placeholder="Informe tipo de equipamento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="marcaEquipamento"><span class="text-danger" style="margin-right:5px;">*</span>Marca do Equipamento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="marcaEquipamento" type="text" name="marcaEquipamento" placeholder="Marca do equipamento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="serieEquipamento"><span class="text-danger" style="margin-right:5px;">*</span>Número de série de equipamento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="serieEquipamento" type="text" name="serieEquipamento" placeholder="Número de série do equipamento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="patrimonioEquipamento"><span class="text-danger" style="margin-right:5px;">*</span>Número de patrimônio do equipamento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="patrimonioEquipamento" type="number" name="patrimonioEquipamento" placeholder="Número de patrimônio do equipamento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                               
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                        </div>                
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- fim modal edita equipamentos-->
+
+<!-- Modal Exclui equipamentos -->
+<div class="modal fade" id="modal_exclui_equipamento" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiEquipamento"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('Equipamento/excluir_equipamentos') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiEquipamento" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idEquipamentoExclui"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idEquipamentoExclui" type="text" name="idEquipamentoExclui" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir este Equipamento? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui equipamentos -->

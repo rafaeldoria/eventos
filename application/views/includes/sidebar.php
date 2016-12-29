@@ -20,7 +20,8 @@
             <span class="hidden-tablet">Equipamentos</span>') ?> 
             </li>
             <li>
-                <a href="#"><i class="fa fa-tags"></i>Fornecedores</a>
+                <?= anchor('Fornecedor', '<i class="fa fa-tags"></i>
+            <span class="hidden-tablet">Fornecedores</span>') ?>                 
             </li>
 
             <li>

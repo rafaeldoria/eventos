@@ -11,7 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <link rel="stylesheet" href="<?= base_url('assets/css/custom.css') ?>">  
                             <script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
                             <script src="<?= base_url('assets/js/jquery-1.10.2.js') ?>"></script>
-                            <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>                            
+                            <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>  ]
+                            <script src="<?= base_url('js/aplicacao/usuario.js') ?>"></script>  
                             <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
                             <title>IBS EVENTOS SISTEMA</title>
                             </head>

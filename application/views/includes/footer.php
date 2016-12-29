@@ -18,7 +18,10 @@
 <script src="<?= base_url('assets/js/usuarios.js') ?>"></script>
 <script src="<?= base_url('assets/js/locais.js') ?>"></script>
 <script src="<?= base_url('assets/js/empresas.js') ?>"></script>
-
+<script src="<?= base_url('assets/js/equipamentos.js') ?>"></script>
+<script src="<?= base_url('assets/js/fornecedores.js') ?>"></script>
+<script src="<?= base_url('assets/js/turmas.js') ?>"></script>
+<script src="<?= base_url('assets/js/professores.js') ?>"></script>
 
 </body>
 </html>
