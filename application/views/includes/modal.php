@@ -531,3 +531,125 @@
     </div>
 </div>
 <!-- Fim modal exclui equipamentos -->
+
+<!-- Modal Edita Fornecedor-->
+<div class="modal fade" id="modal_edita_fornecedor" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelFornecedor"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('Fornecedor/editar_fornecedor') ?>" id="formulario_editar">
+                    <div id="form_modal">
+                        <div id="div-idFornecedor" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idFornecedor"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idFornecedor" type="text" name="idFornecedor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="nomeFornecedor"><span class="text-danger" style="margin-right:5px;">*</span>Nome do Fornecedor:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="nomeFornecedor" type="text" name="nomeFornecedor" placeholder="Informe nome do fornecedor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                        
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="cnpjFornecedor"><span class="text-danger" style="margin-right:5px;">*</span>Número do CNPJ:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="cnpjFornecedor" type="text" name="cnpjFornecedor" placeholder="Número do cnpj" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="telefoneFornecedor"><span class="text-danger" style="margin-right:5px;">*</span>Número do telefone do fornecedor:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="telefoneFornecedor" type="text" name="telefoneFornecedor" placeholder="Número do telefone do fornecedor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="enderecoFornecedor"><span class="text-danger" style="margin-right:5px;">*</span>Endereço Fornecedor:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="enderecoFornecedor" type="text" name="enderecoFornecedor" placeholder="Endereço Fornecedor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                               
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                        </div>                
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- fim modal edita fornecedor-->
+
+<!-- Modal Exclui fornecedor -->
+<div class="modal fade" id="modal_exclui_fornecedor" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiFornecedor"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('Fornecedor/excluir_fornecedor') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiFornecedor" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idFornecedorExclui"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idFornecedorExclui" type="text" name="idFornecedorExclui" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir este Fornecedor? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui fornecedor -->

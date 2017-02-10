@@ -31,8 +31,8 @@
                     <th>ID</th>
                     <th>Nome Fornecedor</th>
                     <th>CNPJ</th>
-                    <th>Endereço</th>
-                    <th>Telefone</th>                    
+                    <th>Telefone</th>
+                    <th>Endereço</th>                    
                     <th class="actions">Ações</th>
                 </tr>
             </thead>
