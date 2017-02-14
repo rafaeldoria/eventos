@@ -653,3 +653,113 @@
     </div>
 </div>
 <!-- Fim modal exclui fornecedor -->
+
+<!-- Modal Edita Turma-->
+<div class="modal fade" id="modal_edita_turma" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelTurma"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('Turma/editar_turma') ?>" id="formulario_editar">
+                    <div id="form_modal">
+                        <div id="div-idTurma" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idTurma"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idTurma" type="text" name="idTurma" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                            
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="nomeTurma"><span class="text-danger" style="margin-right:5px;">*</span>Nome da Turma:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="nomeTurma" type="text" name="nomeTurma" placeholder="Informe nome da turma" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="totalAlunosTurma"><span class="text-danger" style="margin-right:5px;">*</span>Total de Alunos:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="totalAlunosTurma" type="number" name="totalAlunosTurma" placeholder="Total de Alunos da turma" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="observacaoTurma"><span class="text-danger" style="margin-right:5px;">*</span>Observações:</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="observacaoTurma" name="observacaoTurma"  rows="3"/>Sem Obervações</textarea>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                                       
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                        </div>                
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- Fim modal edita turma -->
+
+<!-- Modal Exclui turma -->
+<div class="modal fade" id="modal_exclui_Turma" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiTurma"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('Turma/excluir_turma') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiTurma" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idExcluiTurma"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idExcluiTurma" type="text" name="idExcluiTurma" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir esta Turma? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui turma -->

@@ -25,7 +25,8 @@
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-university "></i>Turmas </a>
+                <?= anchor('Turma', '<i class="fa fa-university"></i>
+            <span class="hidden-tablet">Turmas</span>') ?>   
             </li>
             <li>
                 <a href="#"><i class="fa fa-graduation-cap "></i>Professores</a>

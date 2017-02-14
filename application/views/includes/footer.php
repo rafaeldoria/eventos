@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-lg-12" >
-            &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;" target="_blank">www.binarytheme.com</a>
+            &copy;  ibs.edu.br | Design by: <a href="rafael.doria@ibs.edu.br" style="color:#fff;" target="_blank">rafael.doria@ibs.edu.br</a>
         </div>
     </div>
 </div>
