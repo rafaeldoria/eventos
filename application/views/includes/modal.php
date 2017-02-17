@@ -698,7 +698,7 @@
                                 <div class="input-group">
                                     <input class="form-control" id="totalAlunosTurma" type="number" name="totalAlunosTurma" placeholder="Total de Alunos da turma" required/>
                                     <span class="input-group-btn">
-                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></label>
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
                                     </span>
                                     </span>
                                 </div>
@@ -752,6 +752,226 @@
                             </div>
                         </div>
                         <p> Deseja realmente excluir esta Turma? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui turma -->
+
+<!-- Modal Edita Professor-->
+<div class="modal fade" id="modal_edita_professor" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelProfessor"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('Professor/editar_professor') ?>" id="formulario_editar">
+                    <div id="form_modal">
+                        <div id="div-idProfessor" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idProfessor"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idProfessor" type="text" name="idProfessor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                            
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="nomeProfessor"><span class="text-danger" style="margin-right:5px;">*</span>Nome Professor:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="nomeProfessor" type="text" name="nomeProfessor" placeholder="Informe nome professor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="emailProfessor"><span class="text-danger" style="margin-right:5px;">*</span>Email Professor:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="emailProfessor" type="text" name="emailProfessor" placeholder="Email Professor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="celularProfessor"><span class="text-danger" style="margin-right:5px;">*</span>Celular Professor: ((xx)xxxxx-xxxx)</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="celularProfessor" type="text" name="celularProfessor" pattern="^\(\d{2}\)\d{5}-\d{4}$" placeholder="Informe celular professor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-phone" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="observacaoProfessor"><span class="text-danger" style="margin-right:5px;">*</span>Observações:</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="observacaoProfessor" name="observacaoProfessor"  rows="3"/>Sem Obervações</textarea>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                                       
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                        </div>                
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- Fim modal edita Professor -->
+
+<!-- Modal Exclui Professor -->
+<div class="modal fade" id="modal_exclui_professor" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiProfessor"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('Professor/excluir_professor') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiProfessor" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idExcluiProfessor"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idExcluiProfessor" type="text" name="idExcluiProfessor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir este Professor? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui turma -->
+
+<!-- Modal Edita Tipo de Evento-->
+<div class="modal fade" id="modal_edita_TipoEvento" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelTipoEvento">Editar Tipo de Evento</h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('TiposEventos/editar_tipoEventos') ?>" id="formulario_editar">
+                    <div id="form_modal">
+                        <div id="div-idTipoEvento" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idTipoEvento"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idTipoEvento" type="text" name="idTipoEvento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                            
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="nomeTipoEvento"><span class="text-danger" style="margin-right:5px;">*</span>Tipo de evento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="nomeTipoEvento" type="text" name="nomeTipoEvento" placeholder="Informe Tipo de Evento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                         
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="observacaoTipoEvento"><span class="text-danger" style="margin-right:5px;">*</span>Observações:</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="observacaoTipoEvento" name="observacaoTipoEvento"  rows="3"/>Sem Obervações</textarea>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                                       
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                        </div>                
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- Fim modal edita Tipo de Evento -->
+
+<!-- Modal Exclui Tipo de Evento -->
+<div class="modal fade" id="modal_exclui_TipoEvento" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiTipoEvento"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('TiposEventos/excluir_tipoEventos') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiTipoEvento" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idExcluiTipoEvento"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idExcluiTipoEvento" type="text" name="idExcluiTipoEvento" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir este Tipo de Evento? </p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  

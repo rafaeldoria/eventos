@@ -29,10 +29,12 @@
             <span class="hidden-tablet">Turmas</span>') ?>   
             </li>
             <li>
-                <a href="#"><i class="fa fa-graduation-cap "></i>Professores</a>
+                <?= anchor('Professor', '<i class="fa fa-graduation-cap"></i>
+            <span class="hidden-tablet">Professores</span>') ?>                  
             </li>
             <li>
-                <a href="#"><i class="fa fa-exchange "></i>Tipos de Eventos </a>
+                <?= anchor('TiposEventos', '<i class="fa fa-exchange"></i>
+            <span class="hidden-tablet">Tipos de Eventos</span>') ?>                
             </li>
             <li>
                 <a href="#"><i class="fa fa-tablet "></i>Eventos </a>                                                    
