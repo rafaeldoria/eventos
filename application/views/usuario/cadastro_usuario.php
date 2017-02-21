@@ -105,6 +105,26 @@
                 <p id="resultado"></p>
                 <div class="row">                          
                     <div class="form-group col-xs-12">
+                        <label for="setorUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Selecione Setor:</label>
+                        <div class="input-group">
+                            <select class="form-control" id="setorUsuario" name="setorUsuario" required/>
+                            <option><?php echo $optionsSetor; ?></option>                                        
+                            </select>
+                            <span class="input-group-btn">
+                                <label class="btn btn-primary"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></label>
+                            </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--<p>
+			Escolha o Setor:<br />
+			<select name="setores" id="setores">
+				
+			</select>
+		</p>-->
+                <div class="row">                          
+                    <div class="form-group col-xs-12">
                         <label for="tipoUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Selecione Tipo Usuário:</label>
                         <div class="input-group">
                             <select class="form-control" id="tipoUsuario" name="tipoUsuario" onchange='retorna_tiposUsuarios($(this).val())' />
@@ -116,7 +136,7 @@
                             </span>
                         </div>
                     </div>
-                </div>                         
+                </div>
                 <div class="form-group ">
                     <button id="botao_cadastrar" type="submit" class="btn btn-primary btn-lg btn-block login-button" >Cadastrar</button>
                 </div>

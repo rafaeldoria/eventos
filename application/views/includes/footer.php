@@ -23,6 +23,7 @@
 <script src="<?= base_url('assets/js/turmas.js') ?>"></script>
 <script src="<?= base_url('assets/js/professores.js') ?>"></script>
 <script src="<?= base_url('assets/js/tiposEventos.js') ?>"></script>
+<script src="<?= base_url('assets/js/setores.js') ?>"></script>
 
 </body>
 </html>

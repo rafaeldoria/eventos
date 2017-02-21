@@ -60,7 +60,7 @@
                     <div class="row">
                         <div class="form-group col-xs-8">
                             <button class="btn btn-primary" type="submit">Logar</button>
-                            <?= anchor('Usuario/cadastrar_usuario', 'Cadastrar', array("class" => "btn btn-primary")); ?></li>                            
+                            <?= anchor('Login/novo_login', 'Cadastrar', array("class" => "btn btn-primary")); ?></li>                            
                         </div>
                     </div>                            
 

@@ -30,5 +30,9 @@ class Login extends CI_Controller {
         $this->session->set_flashdata("success", "Deslogado");
         redirect("/login");
     }
+    
+    public function novo_login(){        
+        $this->load->view("login/cadastro_novousuario");
+    }
 
 }

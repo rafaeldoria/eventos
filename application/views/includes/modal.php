@@ -983,3 +983,113 @@
     </div>
 </div>
 <!-- Fim modal exclui turma -->
+
+<!-- Modal Edita Setor-->
+<div class="modal fade" id="modal_edita_Setor" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelSetor">Editar Setor</h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+
+                <!-- Username Field -->
+                <form role="form" method="post" action="<?= base_url('Setor/editar_setor') ?>" id="formulario_editar">
+                    <div id="form_modal">
+                        <div id="div-idSetor" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idSetor"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idSetor" type="text" name="idSetor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                            
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="nomeSetor"><span class="text-danger" style="margin-right:5px;">*</span>Tipo de evento:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="nomeSetor" type="text" name="nomeSetor" placeholder="Informe nome Setor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="responsavelSetor"><span class="text-danger" style="margin-right:5px;">*</span>Gerente do setor: </label>
+                                <div class="input-group">
+                                    <input class="form-control" id="responsavelSetor" type="text" name="responsavelSetor" placeholder="Nome gerente do setor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="observacaoSetor"><span class="text-danger" style="margin-right:5px;">*</span>Observações:</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="observacaoSetor" name="observacaoSetor"  rows="3"/>Sem Obervações</textarea>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                                                       
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
+                        </div>                
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- Fim modal edita Tipo de Evento -->
+
+<!-- Modal Exclui Tipo de Evento -->
+<div class="modal fade" id="modal_exclui_Setor" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabelExcluiSetor"></h4>
+            </div>
+            <div id="div_modal" class="modal-body">
+                <!-- Login Form -->
+                <form role="form" method="post" action="<?= base_url('Setor/excluir_setor') ?>" id="formulario_excluir">
+                    <div id="form_modal">
+                        <div id="div-idExcluiSetor" class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="idExcluiSetor"><span class="text-danger" style="margin-right:5px;">*</span>Id:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="idExcluiSetor" type="text" name="idExcluiSetor" required/>
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p> Deseja realmente excluir este Setor? </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sim</button>
+                            <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal exclui turma -->

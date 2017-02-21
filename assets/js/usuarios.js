@@ -70,10 +70,3 @@ function verificarSenha() {
         document.getElementById("resultado").style.color = "#FF6347";
     }
 }
-
-
-
-
-
-
-

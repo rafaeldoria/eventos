@@ -33,6 +33,10 @@
             <span class="hidden-tablet">Professores</span>') ?>                  
             </li>
             <li>
+                <?= anchor('Setor', '<i class="fa fa-briefcase"></i>
+            <span class="hidden-tablet">Setores da IBS</span>') ?>                
+            </li>
+            <li>
                 <?= anchor('TiposEventos', '<i class="fa fa-exchange"></i>
             <span class="hidden-tablet">Tipos de Eventos</span>') ?>                
             </li>
