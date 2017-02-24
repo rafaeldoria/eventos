@@ -9,7 +9,7 @@ function retorna_tiposUsuarios() {
     }
     return $option;
 }
-
+/*
 function retorna_setores() {
     $ci = get_instance();
     $ci->load->model("Setores_model");
@@ -19,4 +19,4 @@ function retorna_setores() {
         $option .= "<option value='$linha->idSetor'>$linha->nomeSetor</option>";
     }
     return $option;
-}
+}*/

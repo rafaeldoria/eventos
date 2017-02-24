@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel"></h4>
+                <h4 class="modal-title" id="modalLabelUsuario"></h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -84,7 +84,19 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>                                 
+                        </div>
+                        <div class="row">                          
+                            <div class="form-group col-xs-12">
+                                <label for="setorUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Selecione Setor:</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="selectSetor" name="setorUsuario"></select>                            
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></label>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Atualizar</button>                    
                         </div>                
@@ -103,7 +115,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExclui"></h4>
+                <h4 class="modal-title" id="modalLabelExclui">Excluir Usuário</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -121,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir Usuário? </p>
+                        <p id="excluirUsuario"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -140,7 +152,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">Editar local</h4>
+                <h4 class="modal-title" id="modalLabelLocal"></h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -235,7 +247,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiLocal"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiLocal">Excluir Local</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -253,7 +265,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir esse Local? </p>
+                        <p id="excluirLocal"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -272,7 +284,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">Editar empresa</h4>
+                <h4 class="modal-title" id="modalLabelEmpresa"></h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -367,7 +379,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiEmpresa"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiEmpresa">Excluir Empresa</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -385,7 +397,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir Empresa? </p>
+                        <p id="excluirEmpresa"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -501,7 +513,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiEquipamento"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiEquipamento">Excluir Equipamento</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -519,7 +531,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir este Equipamento? </p>
+                        <p id="excluirEquipamento"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -623,7 +635,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiFornecedor"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiFornecedor">Excluir Fornecedor</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -641,7 +653,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir este Fornecedor? </p>
+                        <p id="excluirFornecedor"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -733,7 +745,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiTurma"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiTurma">Excluir Turma</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -751,7 +763,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir esta Turma? </p>
+                        <p id="excluirTurma"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -855,7 +867,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiProfessor"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiProfessor">Excluir Professor</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -873,7 +885,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir este Professor? </p>
+                        <p id="excluirProfessor"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -892,7 +904,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelTipoEvento">Editar Tipo de Evento</h4>
+                <h4 class="modal-title" id="modalLabelTipoEvento"></h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -953,7 +965,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiTipoEvento"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiTipoEvento">Excluir Tipo de Evento</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -971,7 +983,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir este Tipo de Evento? </p>
+                        <p id="excluirTipoEvento"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  
@@ -990,7 +1002,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelSetor">Editar Setor</h4>
+                <h4 class="modal-title" id="modalLabelSetor"></h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -1063,7 +1075,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabelExcluiSetor"></h4>
+                <h4 class="modal-title" id="modalLabelExcluiSetor">Excluir Setor</h4>
             </div>
             <div id="div_modal" class="modal-body">
                 <!-- Login Form -->
@@ -1081,7 +1093,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p> Deseja realmente excluir este Setor? </p>
+                        <p id="excluirSetor"></p>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Sim</button>
                             <button class="btn btn-default" data-dismiss="modal">N&atilde;o</button>  

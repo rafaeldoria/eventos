@@ -28,7 +28,6 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Tipo de Evento</th>
                     <th>Observação</th> 
                     <th class="actions">Ações</th>

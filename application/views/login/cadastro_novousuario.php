@@ -144,11 +144,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                     <p id="resultado"></p>
                                                                     <div class="row">                          
                                                                         <div class="form-group col-xs-12">
-                                                                            <label for="tipoUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Selecione Tipo Usuário:</label>
+                                                                            <label for="setorUsuario"><span class="text-danger" style="margin-right:5px;">*</span>Selecione Setor:</label>
                                                                             <div class="input-group">
-                                                                                <select class="form-control" id="tipoUsuario" name="tipoUsuario" onchange='retorna_tiposUsuarios($(this).val())' />
-                                                                                <option><?php echo $tipoDeUsuario ?></option>                                        
-                                                                                </select>
+                                                                                <select class="form-control" id="selectSetor" name="setorUsuario"></select>                            
                                                                                 <span class="input-group-btn">
                                                                                     <label class="btn btn-primary"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></label>
                                                                                 </span>
@@ -191,4 +189,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <!-- CUSTOM SCRIPTS -->
                             <script src="assets/js/custom.js"></script>
                             console.log(document.querySelector('#tipoUsuario'));
-                           <script src="<?= base_url('assets/js/usuarios.js') ?>"></script>
+                            <script src="<?= base_url('assets/js/usuarios.js') ?>"></script>

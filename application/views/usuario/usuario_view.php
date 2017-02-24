@@ -30,8 +30,7 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
+                    <th>Usuário</th>
                     <th>Telefone</th>
                     <th>E-mail</th>
                     <th>Login</th>
@@ -43,7 +42,7 @@
             </thead>
             <tbody id="tabelaUsuarios">                
             </tbody>
-
+            <?php echo base64_decode($senha); ?>
         </table>
     </div>
 

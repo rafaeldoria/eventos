@@ -1,6 +1,11 @@
 <?php
 
 class Empresa extends CI_Controller {
+    
+    public function __construct() {
+        parent::__construct();
+        $this->load->model("Empresas_model");
+    }
 
     public function index() {
         autorizar();
@@ -19,20 +24,17 @@ class Empresa extends CI_Controller {
             "responsavelEmpresa" => $this->input->post("responsavelEmpresa"),
             "celularEmpresa" => $this->input->post("celularEmpresa"),
             "emailEmpresa" => $this->input->post("emailEmpresa")            
-        );        
-        $this->load->model("Empresas_model");
+        );  
         $this->Empresas_model->salvaEmpresa($empresa);
         redirect("empresa");
     }
     
     public function lista_empresas(){
-        $this->load->model("Empresas_model");
         echo $this->Empresas_model->listaEmpresas();        
     }
     
     public function buscar_empresa(){
         $idEmpresa = $this->input->post("idEmpresa");
-        $this->load->model("Empresas_model");
         echo $this->Empresas_model->buscarEmpresaId($idEmpresa);        
     }
     
@@ -45,14 +47,12 @@ class Empresa extends CI_Controller {
             "celularEmpresa" => $this->input->post("celularEmpresa"),
             "emailEmpresa" => $this->input->post("emailEmpresa")            
         );
-        $this->load->model("Empresas_model");
         $this->Empresas_model->editarEmpresa($idEmpresa,$empresa);
         redirect("empresa");
     }
     
     public function excluir_empresa(){
         $idEmpresa = $this->input->post("idEmpresaExclui");
-        $this->load->model("Empresas_model");
         $this->Empresas_model->excluirEmpresa($idEmpresa);
         redirect("empresa");
     }

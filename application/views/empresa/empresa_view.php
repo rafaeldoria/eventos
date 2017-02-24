@@ -27,8 +27,7 @@
     <div class="table-responsive col-md-12">
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
-                <tr>
-                    <th>ID</th>
+                <tr>                    
                     <th>Empresa</th>
                     <th>Telefone Empresa</th>
                     <th>Responsável Empresa</th>

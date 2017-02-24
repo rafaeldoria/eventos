@@ -6,10 +6,9 @@ class MY_Loader extends CI_Loader {
    
 
     public function template($nome, $dados = array()) {
-        $usuario = autorizar();        
-        $setores = retorna_setores();
+        $usuario = autorizar();                
         $dados = array("usuario" => $usuario['nomeUsuario'],
-            "optionsSetor" => $setores);            
+            "senha" => $usuario['senhaUsuario']);            
         $this->view("includes/header");
         $this->view("includes/menu");
         $this->view("includes/sidebar");

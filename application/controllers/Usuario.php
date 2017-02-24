@@ -4,6 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuario extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        $this->load->model("Usuarios_model");
+    }
+
     public function index() {
         autorizar();
         $this->load->model("Usuarios_model");
@@ -11,7 +16,7 @@ class Usuario extends CI_Controller {
     }
 
     public function cadastrar_usuario() {
-        autorizar();        
+        autorizar();
         $this->load->template("usuario/cadastro_usuario");
     }
 
@@ -22,12 +27,9 @@ class Usuario extends CI_Controller {
             "telefoneUsuario" => $this->input->post("telefoneUsuario"),
             "ramalUsuario" => $this->input->post("ramalUsuario"),
             "loginUsuario" => $this->input->post("loginUsuario"),
-            "senhaUsuario" => md5($this->input->post("senhaUsuario")),
-            "setorUsuario" => $this->input->post("setorUsuario"),
-            "tipoUsuario" => $this->input->post("tipoUsuario")
+            "senhaUsuario" => base64_encode($this->input->post("senhaUsuario")),
+            "setorUsuario" => $this->input->post("setorUsuario")            
         );
-
-        $this->load->model("Usuarios_model");
         $this->Usuarios_model->salvaUsuario($usuario);
 
         redirect("usuario");
@@ -35,7 +37,6 @@ class Usuario extends CI_Controller {
 
     public function lista_usuarios() {
         autorizar();
-        $this->load->model("Usuarios_model");
         echo $this->Usuarios_model->listaUsuarios();
     }
 
@@ -47,9 +48,8 @@ class Usuario extends CI_Controller {
             "telefoneUsuario" => $this->input->post("telefoneUsuario"),
             "ramalUsuario" => $this->input->post("ramalUsuario"),
             "loginUsuario" => $this->input->post("loginUsuario"),
+            "setorUsuario" => $this->input->post("setorUsuario"),
         );
-
-        $this->load->model("Usuarios_model");
         $this->Usuarios_model->editaUsuario($usuario, $id);
 
         redirect("usuario");
@@ -57,19 +57,16 @@ class Usuario extends CI_Controller {
 
     public function buscar_usuario() {
         $idUsuario = $this->input->post("idUsuario");
-        $this->load->model("Usuarios_model");
         echo $this->Usuarios_model->buscaUsuarioId($idUsuario);
     }
 
     public function retorna_usuario() {
         $idUsuario = $this->input->post("idUsuario");
-        $this->load->model("Usuarios_model");
         echo $this->Usuarios_model->buscaUsuarioId($idUsuario);
     }
 
     public function excluir_usuario() {
         $idUsuario = $this->input->post("idUsuarioExclui");
-        $this->load->model("Usuarios_model");
         $this->Usuarios_model->excluiUsuario($idUsuario);
         redirect("usuario");
     }
@@ -81,11 +78,9 @@ class Usuario extends CI_Controller {
             "telefoneUsuario" => $this->input->post("telefoneUsuario"),
             "ramalUsuario" => $this->input->post("ramalUsuario"),
             "loginUsuario" => $this->input->post("loginUsuario"),
-            "senhaUsuario" => md5($this->input->post("senhaUsuario")),
-            "tipoUsuario" => $this->input->post("tipoUsuario")
+            "senhaUsuario" => base64_encode($this->input->post("senhaUsuario")),
+            "setorUsuario" => $this->input->post("setorUsuario")
         );
-
-        $this->load->model("Usuarios_model");
         $this->Usuarios_model->salvaUsuario($usuario);
         $this->session->set_flashdata("success", "Cadastro Realizado! - Fazer Login");
         redirect("login");

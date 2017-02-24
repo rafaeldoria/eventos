@@ -28,7 +28,6 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Nome do Professor</th>
                     <th>E-mail</th>
                     <th>Celular</th> 

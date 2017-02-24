@@ -1,8 +1,9 @@
+//tabela lista equipamentos
 $.getJSON("http://localhost/eventos/Equipamento/lista_equipamentos", function (retorno) {
     var equipamento = eval(retorno);
     for (var i = 0; i < equipamento.length; i++) {
         $('#tabelaEquipamentos').append('<tr>' +
-                '<td>' + equipamento[i].idEquipamento + '</td>' +
+                '<td style="display:none">' + equipamento[i].idEquipamento + '</td>' +
                 '<td>' + equipamento[i].nomeEquipamento + '</td>' +
                 '<td>' + equipamento[i].tipoEquipamento + '</td>' +
                 '<td>' + equipamento[i].marcaEquipamento + '</td>' +
@@ -22,9 +23,11 @@ $.getJSON("http://localhost/eventos/Equipamento/lista_equipamentos", function (r
     }
 });
 
+//editar equipamentos
 function editarEquipamento(idEquipamento) {
     $.post("http://localhost/eventos/Equipamento/buscar_equipamento", {idEquipamento: idEquipamento}, function (retorno) {
         var resultado = eval(retorno);        
+        $("#modalLabelEquipamento").text("Editar Equipamento "+ resultado[0].nomeEquipamento);
         $('#idEquipamento').val(resultado[0].idEquipamento);
         $("#div-idEquipamento").css("display", "none");
         $('#nomeEquipamento').val(resultado[0].nomeEquipamento);
@@ -36,12 +39,13 @@ function editarEquipamento(idEquipamento) {
     });
 }
 
+//excluir equipamentos
 function excluirEquipamento(idEquipamento){
     $.post("http://localhost/eventos/Equipamento/buscar_equipamento", {idEquipamento: idEquipamento}, function(retorno){
-        var resultado = eval(retorno);        
-        $("#modalLabelExcluiEquipamento").text("Excluir Equipamento");
+        var resultado = eval(retorno);                
         $('#idEquipamentoExclui').val(resultado[0].idEquipamento);
         $("#div-idExcluiEquipamento").css("display", "none");  
+        $("#excluirEquipamento").text("Deseja realmente excluir "+resultado[0].nomeEquipamento+"?"); 
         $('#modal_exclui_equipamento').modal('show');
     });
 }

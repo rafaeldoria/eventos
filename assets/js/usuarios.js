@@ -1,20 +1,21 @@
+//função para excluir usuário no modal
 function excluirUsuario(idUsuario) {
 
     $.post("http://localhost/eventos/Usuario/retorna_usuario", {idUsuario: idUsuario}, function (retorno) {
-        var resultado = eval(retorno); 
-        $("#modalLabelExclui").text("Excluir Usuário");
+        var resultado = eval(retorno);         
         $('#idUsuarioExclui').val(resultado[0].idUsuario);
         $("#div-idExclui").css("display", "none");
-        $('#nomeUsuarioExclui').val(resultado[0].nomeUsuario);
+        $("#excluirUsuario").text("Deseja realmente excluir "+resultado[0].nomeUsuario+"?"); 
         $('#modal_exclui').modal('show');
     });
 }
 
+//função para editar usuário no modal
 function editarUsuario(idUsuario) {
 
     $.post("http://localhost/eventos/Usuario/buscar_usuario", {idUsuario: idUsuario}, function (retorno) {
         var resultado = eval(retorno);
-        $("#modalLabel").text("Editar Usuário");
+        $("#modalLabelUsuario").text("Editar Usuário "+ resultado[0].nomeUsuario);
         $('#idUsuario').val(resultado[0].idUsuario);
         $("#div-id").css("display", "none");
         $('#nomeUsuario').val(resultado[0].nomeUsuario);
@@ -27,11 +28,12 @@ function editarUsuario(idUsuario) {
     });
 }
 
+//função para preencher tabela usuários
 $.getJSON("http://localhost/eventos/Usuario/lista_usuarios", function (retorno) {
     var usuario = eval(retorno);
     for (var i = 0; i < usuario.length; i++) {
         $('#tabelaUsuarios').append('<tr>' +
-                '<td>' + usuario[i].idUsuario + '</td>' +
+                '<td style="display:none">' + usuario[i].idUsuario + '</td>' +
                 '<td>' + usuario[i].nomeUsuario + '</td>' +
                 '<td>' + usuario[i].telefoneUsuario + '</td>' +
                 '<td>' + usuario[i].emailUsuario + '</td>' +
@@ -56,7 +58,7 @@ $.getJSON("http://localhost/eventos/Usuario/lista_usuarios", function (retorno) 
 
 });
 
-
+//função para confirmar senhas iguais
 console.log(document.querySelector('#tipoUsuario'));
 
 function verificarSenha() {
@@ -70,3 +72,14 @@ function verificarSenha() {
         document.getElementById("resultado").style.color = "#FF6347";
     }
 }
+
+//função para preencher select setores ao adicionar usuário
+$.getJSON("http://localhost/eventos/Setor/lista_setores", function (retorno) {
+    var setor = eval(retorno);
+    for (var i = 0; i < setor.length; i++) {
+        $('#selectSetor').append(                
+                '<option>' + setor[i].nomeSetor + '</option>' +
+                '</select>');
+    }
+});                
+           
