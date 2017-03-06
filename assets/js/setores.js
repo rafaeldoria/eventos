@@ -1,6 +1,6 @@
 function excluirSetor(idSetor) {
 
-    $.post("http://localhost/eventos/Setor/buscar_setor", {idSetor: idSetor}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Setor/buscar_setor", {idSetor: idSetor}, function (retorno) {
         var resultado = eval(retorno);         
         $('#idExcluiSetor').val(resultado[0].idSetor);
         $("#div-idExcluiSetor").css("display", "none");  
@@ -11,7 +11,7 @@ function excluirSetor(idSetor) {
 
 function editarSetor(idSetor) {
 
-    $.post("http://localhost/eventos/Setor/buscar_setor", {idSetor: idSetor}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Setor/buscar_setor", {idSetor: idSetor}, function (retorno) {
         var resultado = eval(retorno); 
         $("#modalLabelSetor").text("Editar Setor "+ resultado[0].nomeSetor);
         $('#idSetor').val(resultado[0].idSetor);
@@ -23,7 +23,7 @@ function editarSetor(idSetor) {
     });
 }
 
-$.getJSON("http://localhost/eventos/Setor/lista_setores", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Setor/lista_setores", function (retorno) {
     var setor = eval(retorno);
     for (var i = 0; i < setor.length; i++) {
         $('#tabelaSetores').append('<tr>' +

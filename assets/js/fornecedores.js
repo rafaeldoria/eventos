@@ -1,5 +1,5 @@
 //lista tabela fornecedores
-$.getJSON("http://localhost/eventos/Fornecedor/lista_fornecedores", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Fornecedor/lista_fornecedores", function (retorno) {
     var fornecedor = eval(retorno);
     for (var i = 0; i < fornecedor.length; i++) {
         $('#tabelaFornecedores').append('<tr>' +
@@ -27,7 +27,7 @@ $.getJSON("http://localhost/eventos/Fornecedor/lista_fornecedores", function (re
 
 //editar fornecedor
 function editarFornecedor(idFornecedor) {    
-    $.post("http://localhost/eventos/Fornecedor/buscar_fornecedor", {idFornecedor: idFornecedor}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Fornecedor/buscar_fornecedor", {idFornecedor: idFornecedor}, function (retorno) {
         var resultado = eval(retorno);
         $("#modalLabelFornecedor").text("Editar Fornecedor "+ resultado[0].nomeFornecedor);
         $('#idFornecedor').val(resultado[0].idFornecedor);
@@ -42,7 +42,7 @@ function editarFornecedor(idFornecedor) {
 
 function excluirFornecedor(idFornecedor) {
 
-    $.post("http://localhost/eventos/Fornecedor/buscar_fornecedor", {idFornecedor: idFornecedor}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Fornecedor/buscar_fornecedor", {idFornecedor: idFornecedor}, function (retorno) {
         var resultado = eval(retorno); 
         $("#modalLabelExcluiFornecedor").text("Excluir Fornecedor");
         $('#idFornecedorExclui').val(resultado[0].idFornecedor);

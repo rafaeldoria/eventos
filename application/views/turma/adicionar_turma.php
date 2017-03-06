@@ -15,46 +15,76 @@
 
                 <!-- Login Form -->
                 <form role="form" method="post" action="<?= base_url('Turma/nova_turma') ?>" id="formulario_adicionar">
-                <!-- Username Field -->
-                <div class="row">                          
-                    <div class="form-group col-xs-12">
-                        <label for="nomeTurma"><span class="text-danger" style="margin-right:5px;">*</span>Nome Turma:</label>
-                        <div class="input-group">
-                            <input class="form-control" id="nomeTurma" type="text" name="nomeTurma" placeholder="Informe nome da turma" required/>
-                            <span class="input-group-btn">
-                                <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
-                            </span>
-                            </span>
+                    <!-- Username Field -->
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="nomeTurma"><span class="text-danger" style="margin-right:5px;">*</span>Nome Turma:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="nomeTurma" type="text" name="nomeTurma" placeholder="Informe nome da turma" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-font" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-xs-12">
-                        <label for="totalAlunosTurma"><span class="text-danger" style="margin-right:5px;">*</span>Total de Alunos:</label>
-                        <div class="input-group">
-                            <input class="form-control" id="totalAlunosTurma" type="number" name="totalAlunosTurma" placeholder="Informe total de alunos" required/>
-                            <span class="input-group-btn">
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="totalAlunosTurma"><span class="text-danger" style="margin-right:5px;">*</span>Total de Alunos:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="totalAlunosTurma" type="number" name="totalAlunosTurma" placeholder="Informe total de alunos" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="diasAula"><span class="text-danger" style="margin-right:5px;">*</span>Selecione dias da aula:</label>
+                            <!--<span class="input-group-btn">
                                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
+                            </span>  
                             </span>
-                            </span>
+                            <div class="input-group">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="segunda" value="segunda">Segunda-Feira</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="terca" value="terca">Terça-Feira</label>
+                                </div>
+                                <div class="checkbox disabled">
+                                    <label><input type="checkbox" id="quarta" value="qaurta">Quarta-Feira</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="quinta" value="quinta">Quinta-Feira</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="sexta" value="sexta">Sexta-Feira</label>
+                                </div>
+                                <div class="checkbox disabled">
+                                    <label><input type="checkbox" id="sabado" value="sabado">Sábado</label>
+                                </div>
+
+                            </div>  
                         </div>
-                    </div>
-                </div>
-                <div class="row">                          
-                    <div class="form-group col-xs-12">
-                        <label for="observacaoTurma"><span class="text-danger" style="margin-right:5px;">*</span>Observações:</label>
-                        <div class="input-group">
-                            <textarea class="form-control" id="observacaoTurma" name="observacaoTurma"  rows="3"/>Sem Obervações</textarea>
-                            <span class="input-group-btn">
-                                <label class="btn btn-primary"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></label>
-                            </span>
-                            </span>
+                    </div>     -->       
+                    <div class="row">                          
+                        <div class="form-group col-xs-12">
+                            <label for="observacaoTurma"><span class="text-danger" style="margin-right:5px;">*</span>Observações:</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="observacaoTurma" name="observacaoTurma"  rows="3"/>Sem Obervações</textarea>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></label>
+                                </span>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </div>                                        
-                <div class="form-group ">
-                    <button id="botao_cadastrar" type="submit" class="btn btn-primary btn-lg btn-block login-button" >Adicionar</button>
-                </div>                
+                    </div>                                        
+                    <div class="form-group ">
+                        <button id="botao_cadastrar" type="submit" class="btn btn-primary btn-lg btn-block login-button" >Adicionar</button>
+                    </div>                
                 </form>
             </div>
         </div>

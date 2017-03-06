@@ -1,4 +1,4 @@
-$.getJSON("http://localhost/eventos/Turma/lista_turmas", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Turma/lista_turmas", function (retorno) {
     var turma = eval(retorno);
     for (var i = 0; i < turma.length; i++) {
         $('#tabelaTurmas').append('<tr>' +
@@ -23,7 +23,7 @@ $.getJSON("http://localhost/eventos/Turma/lista_turmas", function (retorno) {
 });
 
 function editarTurma(idTurma) {
-    $.post("http://localhost/eventos/Turma/buscar_turma", {idTurma: idTurma}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Turma/buscar_turma", {idTurma: idTurma}, function (retorno) {
         var resultado = eval(retorno);
         $("#modalLabelTurma").text("Editar Turma "+ resultado[0].nomeTurma);
         $('#idTurma').val(resultado[0].idTurma);
@@ -36,7 +36,7 @@ function editarTurma(idTurma) {
 }
 
 function excluirTurma(idTurma) {
-    $.post("http://localhost/eventos/Turma/buscar_turma", {idTurma: idTurma}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Turma/buscar_turma", {idTurma: idTurma}, function (retorno) {
         var resultado = eval(retorno);        
         $('#idExcluiTurma').val(resultado[0].idTurma);
         $("#div-idExcluiTurma").css("display", "none");

@@ -1,4 +1,4 @@
-$.getJSON("http://localhost/eventos/Empresa/lista_empresas", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Empresa/lista_empresas", function (retorno) {
     var empresa = eval(retorno);
     for (var i = 0; i < empresa.length; i++) {
         $('#tabelaEmpresas').append('<tr>' +
@@ -25,7 +25,7 @@ $.getJSON("http://localhost/eventos/Empresa/lista_empresas", function (retorno) 
 });
 
 function editarEmpresa(idEmpresa) {
-    $.post("http://localhost/eventos/Empresa/buscar_empresa", {idEmpresa: idEmpresa}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Empresa/buscar_empresa", {idEmpresa: idEmpresa}, function (retorno) {
         var resultado = eval(retorno); 
         $("#modalLabelEmpresa").text("Editar Empresa "+ resultado[0].nomeEmpresa);
         $('#idEmpresa').val(resultado[0].idEmpresa);
@@ -40,7 +40,7 @@ function editarEmpresa(idEmpresa) {
 }
 
 function excluirEmpresa(idEmpresa){
-    $.post("http://localhost/eventos/Empresa/buscar_empresa", {idEmpresa: idEmpresa}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Empresa/buscar_empresa", {idEmpresa: idEmpresa}, function (retorno) {
         var resultado = eval(retorno);                         
         $('#idEmpresaExclui').val(resultado[0].idEmpresa);
         $("#div-idExcluiEmpresa").css("display", "none"); 

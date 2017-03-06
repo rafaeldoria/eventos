@@ -10,8 +10,7 @@ class Usuario extends CI_Controller {
     }
 
     public function index() {
-        autorizar();
-        $this->load->model("Usuarios_model");
+        autorizar();        
         $this->load->template("usuario/usuario_view");
     }
 

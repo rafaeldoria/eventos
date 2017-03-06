@@ -1,5 +1,5 @@
 //lista tabela professores
-$.getJSON("http://localhost/eventos/Professor/lista_professores", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Professor/lista_professores", function (retorno) {
     var professor = eval(retorno);
     for (var i = 0; i < professor.length; i++) {
         $('#tabelaProfessores').append('<tr>' +
@@ -24,7 +24,7 @@ $.getJSON("http://localhost/eventos/Professor/lista_professores", function (reto
 
 //edtiar Professor
 function editarProfessor(idProfessor) {
-    $.post("http://localhost/eventos/Professor/buscar_professor", {idProfessor: idProfessor}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Professor/buscar_professor", {idProfessor: idProfessor}, function (retorno) {
         var resultado = eval(retorno);   
         $("#modalLabelProfessor").text("Editar Dados Professor "+resultado[0].nomeProfessor);
         $('#idProfessor').val(resultado[0].idProfessor);
@@ -39,7 +39,7 @@ function editarProfessor(idProfessor) {
 
 //excluir Professor
 function excluirProfessor(idProfessor){
-    $.post("http://localhost/eventos/Professor/buscar_professor", {idProfessor: idProfessor}, function(retorno){
+    $.post("http://localhost:8090/eventos/Professor/buscar_professor", {idProfessor: idProfessor}, function(retorno){
         var resultado = eval(retorno);        
         $("#modalLabelExcluiProfessor").text("Excluir Professor");
         $('#idExcluiProfessor').val(resultado[0].idProfessor);

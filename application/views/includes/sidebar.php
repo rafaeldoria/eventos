@@ -41,7 +41,8 @@
             <span class="hidden-tablet">Tipos de Eventos</span>') ?>                
             </li>
             <li>
-                <a href="#"><i class="fa fa-tablet "></i>Eventos </a>                                                    
+                <?= anchor('Evento', '<i class="fa fa-tablet"></i>
+            <span class="hidden-tablet">Eventos</span>') ?>                   
             </li>
 
         </ul>

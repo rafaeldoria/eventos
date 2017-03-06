@@ -1,7 +1,7 @@
 //função para excluir usuário no modal
 function excluirUsuario(idUsuario) {
 
-    $.post("http://localhost/eventos/Usuario/retorna_usuario", {idUsuario: idUsuario}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Usuario/retorna_usuario", {idUsuario: idUsuario}, function (retorno) {
         var resultado = eval(retorno);         
         $('#idUsuarioExclui').val(resultado[0].idUsuario);
         $("#div-idExclui").css("display", "none");
@@ -12,8 +12,8 @@ function excluirUsuario(idUsuario) {
 
 //função para editar usuário no modal
 function editarUsuario(idUsuario) {
-
-    $.post("http://localhost/eventos/Usuario/buscar_usuario", {idUsuario: idUsuario}, function (retorno) {
+    
+    $.post("http://localhost:8090/eventos/Usuario/buscar_usuario", {idUsuario: idUsuario}, function (retorno) {
         var resultado = eval(retorno);
         $("#modalLabelUsuario").text("Editar Usuário "+ resultado[0].nomeUsuario);
         $('#idUsuario').val(resultado[0].idUsuario);
@@ -29,7 +29,7 @@ function editarUsuario(idUsuario) {
 }
 
 //função para preencher tabela usuários
-$.getJSON("http://localhost/eventos/Usuario/lista_usuarios", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Usuario/lista_usuarios", function (retorno) {
     var usuario = eval(retorno);
     for (var i = 0; i < usuario.length; i++) {
         $('#tabelaUsuarios').append('<tr>' +
@@ -59,8 +59,6 @@ $.getJSON("http://localhost/eventos/Usuario/lista_usuarios", function (retorno) 
 });
 
 //função para confirmar senhas iguais
-console.log(document.querySelector('#tipoUsuario'));
-
 function verificarSenha() {
     var campo1 = document.getElementById("senhaUsuario").value;
     var campo2 = document.getElementById("senhaUsuario2").value;
@@ -74,7 +72,7 @@ function verificarSenha() {
 }
 
 //função para preencher select setores ao adicionar usuário
-$.getJSON("http://localhost/eventos/Setor/lista_setores", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Setor/lista_setores", function (retorno) {
     var setor = eval(retorno);
     for (var i = 0; i < setor.length; i++) {
         $('#selectSetor').append(                

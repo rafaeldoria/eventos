@@ -1,4 +1,4 @@
-$.getJSON("http://localhost/eventos/TiposEventos/lista_tipoEventos", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/TiposEventos/lista_tipoEventos", function (retorno) {
     var tipoEvento = eval(retorno);
     for (var i = 0; i < tipoEvento.length; i++) {
         $('#tabelaTiposEventos').append('<tr>' +
@@ -20,7 +20,7 @@ $.getJSON("http://localhost/eventos/TiposEventos/lista_tipoEventos", function (r
 });
 
 function editarTipoEvento(idTipoEvento) {
-    $.post("http://localhost/eventos/TiposEventos/buscar_tipoEvento", {idTipoEvento: idTipoEvento}, function (retorno) {
+    $.post("http://localhost:8090/eventos/TiposEventos/buscar_tipoEvento", {idTipoEvento: idTipoEvento}, function (retorno) {
         var resultado = eval(retorno);   
         $("#modalLabelTipoEvento").text("Editar Dados "+resultado[0].nomeTipoEvento);
         $('#idTipoEvento').val(resultado[0].idTipoEvento);
@@ -32,7 +32,7 @@ function editarTipoEvento(idTipoEvento) {
 }
 
 function excluirTipoEvento(idTipoEvento){
-    $.post("http://localhost/eventos/TiposEventos/buscar_tipoEvento", {idTipoEvento: idTipoEvento}, function(retorno){
+    $.post("http://localhost:8090/eventos/TiposEventos/buscar_tipoEvento", {idTipoEvento: idTipoEvento}, function(retorno){
         var resultado = eval(retorno);        
         $("#modalLabelExcluiTipoEvento").text("Excluir Tipo de Evento");
         $('#idExcluiTipoEvento').val(resultado[0].idTipoEvento);

@@ -17,7 +17,7 @@
 
     </div>
     <div class="col-sm-3">
-        <?= anchor('Turma/cadastro_turma', 'Adicionar', 'class="btn btn-primary pull-right h2"') ?>        
+        <?= anchor('Evento/adicionar_evento', 'Adicionar', 'class="btn btn-primary pull-right h2"') ?>        
     </div>
 </div> <!-- /#top -->
 <!-- titulo colunas -->
@@ -28,13 +28,16 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th>Nome da Turma</th>
-                    <th>Total de Alunos na Turma</th>                    
-                    <th>Observação</th>                  
+                    <th>Evento</th>
+                    <th>Tipo de Evento</th>
+                    <th>Professor/Responsável</th>
+                    <th>Data</th>
+                    <th>Local</th>                    
+                    <th>Período(s)</th>                    
                     <th class="actions">Ações</th>
                 </tr>
             </thead>
-            <tbody id="tabelaTurmas">                
+            <tbody id="tabelaEventos">                
             </tbody>
 
         </table>

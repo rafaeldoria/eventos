@@ -24,6 +24,7 @@
 <script src="<?= base_url('assets/js/professores.js') ?>"></script>
 <script src="<?= base_url('assets/js/tiposEventos.js') ?>"></script>
 <script src="<?= base_url('assets/js/setores.js') ?>"></script>
+<script src="<?= base_url('assets/js/eventos.js') ?>"></script>
 
 </body>
 </html>

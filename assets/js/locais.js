@@ -1,5 +1,5 @@
 //tabela locais/salas
-$.getJSON("http://localhost/eventos/Local/lista_locais", function (retorno) {
+$.getJSON("http://localhost:8090/eventos/Local/lista_locais", function (retorno) {
     var local = eval(retorno);
     for (var i = 0; i < local.length; i++) {
         $('#tabelaLocais').append('<tr>' +
@@ -27,7 +27,7 @@ $.getJSON("http://localhost/eventos/Local/lista_locais", function (retorno) {
 
 //editar local
 function editarLocal(idLocal) {
-    $.post("http://localhost/eventos/Local/buscar_local", {idLocal: idLocal}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Local/buscar_local", {idLocal: idLocal}, function (retorno) {
         var resultado = eval(retorno);
         $("#modalLabelLocal").text("Editar Local "+ resultado[0].nomeLocal);
         $('#idLocal').val(resultado[0].idLocal);
@@ -43,7 +43,7 @@ function editarLocal(idLocal) {
 
 //excluir local
 function excluirLocal(idLocal){
-    $.post("http://localhost/eventos/Local/buscar_local", {idLocal: idLocal}, function (retorno) {
+    $.post("http://localhost:8090/eventos/Local/buscar_local", {idLocal: idLocal}, function (retorno) {
         var resultado = eval(retorno); 
         $("#excluirLocal").text("Excluir Local "+resultado[0].nomeLocal+"?");
         $('#idLocalExcluiLocal').val(resultado[0].idLocal);
